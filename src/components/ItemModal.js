@@ -61,7 +61,7 @@ class ItemModal extends Component {
 
             {/* item link label */}
             <FormGroup>
-              <Label for="item-link">Link</Label>
+              <Label for="item-link">Purchase Link</Label>
               <Input
                 id="item-link"
                 type="url"

@@ -59,7 +59,7 @@ class ViewItemModal extends Component {
                   alt={activeItem.item_name}
                   href={activeItem.item_link}
                 >
-                  Item Link
+                  Purchase Link
                 </CardLink>
               </CardTitle>
             </CardBody>

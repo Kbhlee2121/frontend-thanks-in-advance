@@ -9,6 +9,8 @@ import {
   CardSubtitle,
   CardText,
   Button,
+  Row,
+  Col,
 } from "reactstrap";
 import WishlistModal from "./WishlistModal";
 import FriendWishlist from "./FriendWishlist";
@@ -205,51 +207,53 @@ function WishlistManager(props) {
         </div>
 
         <div className="">
-          <CardGroup className="">
+          <Row>
             {newWishlists.map((wishlist) => {
               const date = new Date(wishlist.created);
               return (
-                <Card
-                  key={wishlist.id}
-                  className="shadow p-3 mb-5 bg-white rounded mx-2 my-2 col card-min-sizing"
-                >
-                  <CardBody>
-                    <CardTitle tag="h5">{wishlist.title}</CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      {`Created: ${
-                        date.getMonth() + 1
-                      }/${date.getDate()}/${date.getFullYear()}`}
-                    </CardSubtitle>
-                    <CardText>{wishlist.description}</CardText>
-                  </CardBody>
-                  <div className="d-flex flex-row justify-content-around">
-                    <CardText
-                      // color="info"
-                      className="custom-link" // className="col mx-1"
-                      onClick={(e) => setEditWishlistState(wishlist)}
-                    >
-                      Edit Info
-                    </CardText>
-                    {/* set active wishlist and navigate  */}
-                    <CardText
-                      // color="primary"
-                      className="custom-link" // className="col mx-1"
-                      onClick={() => editItem(wishlist)}
-                    >
-                      Edit Items
-                    </CardText>
-                    <CardText
-                      // color="danger"
-                      className="custom-link" // className="col mx-1"
-                      onClick={(e) => deleteWishlist(wishlist)}
-                    >
-                      Delete
-                    </CardText>
-                  </div>
-                </Card>
+                <Col sm="4">
+                  <Card
+                    key={wishlist.id}
+                    className="shadow p-3 mb-5 bg-white rounded mx-2 my-2 col card-min-sizing"
+                  >
+                    <CardBody>
+                      <CardTitle tag="h5">{wishlist.title}</CardTitle>
+                      <CardSubtitle className="mb-2 text-muted" tag="h6">
+                        {`Created: ${
+                          date.getMonth() + 1
+                        }/${date.getDate()}/${date.getFullYear()}`}
+                      </CardSubtitle>
+                      <CardText>{wishlist.description}</CardText>
+                    </CardBody>
+                    <div className="d-flex flex-row justify-content-around">
+                      <CardText
+                        // color="info"
+                        className="custom-link" // className="col mx-1"
+                        onClick={(e) => setEditWishlistState(wishlist)}
+                      >
+                        Edit Info
+                      </CardText>
+                      {/* set active wishlist and navigate  */}
+                      <CardText
+                        // color="primary"
+                        className="custom-link" // className="col mx-1"
+                        onClick={() => editItem(wishlist)}
+                      >
+                        Edit Items
+                      </CardText>
+                      <CardText
+                        // color="danger"
+                        className="custom-link" // className="col mx-1"
+                        onClick={(e) => deleteWishlist(wishlist)}
+                      >
+                        Delete
+                      </CardText>
+                    </div>
+                  </Card>
+                </Col>
               );
             })}
-          </CardGroup>
+          </Row>
         </div>
       </div>
       <div>
