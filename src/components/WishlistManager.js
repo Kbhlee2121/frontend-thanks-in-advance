@@ -45,7 +45,9 @@ function WishlistManager(props) {
   //view WL cards GET
   const getWishlists = () => {
     axios
-      .get(`http://localhost:8000/api/user/wishlists/${props.userId}/`)
+      .get(
+        `https://backend-thanks-in-advance.herokuapp.com/api/user/wishlists/${props.userId}/`
+      )
       .then((response) => {
         // use map here?
         setWishlists(response.data);
@@ -91,7 +93,10 @@ function WishlistManager(props) {
     wishlist.user = props.userId;
     console.log(wishlist);
     axios
-      .post("http://localhost:8000/api/wishlist-create/", wishlist)
+      .post(
+        "https://backend-thanks-in-advance.herokuapp.com/api/wishlist-create/",
+        wishlist
+      )
       .then((response) => {
         //add wishlist to end of list
         const newWishlist = response.data;
@@ -114,7 +119,7 @@ function WishlistManager(props) {
     if (foundIndex !== -1) {
       axios
         .put(
-          `http://localhost:8000/api/wishlist-update/${wishlist.id}/`,
+          `https://backend-thanks-in-advance.herokuapp.com/api/wishlist-update/${wishlist.id}/`,
           wishlist
         )
         .then((response) => {
@@ -148,7 +153,9 @@ function WishlistManager(props) {
     );
     if (foundWishlist) {
       axios
-        .delete(`http://localhost:8000/api/wishlist-delete/${wishlist.id}/`)
+        .delete(
+          `https://backend-thanks-in-advance.herokuapp.com/api/wishlist-delete/${wishlist.id}/`
+        )
         .then((response) => {
           const filteredWishlist = wishlists.filter(
             (listItem) => listItem.id !== foundWishlist.id

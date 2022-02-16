@@ -89,7 +89,7 @@ class App extends Component {
 
   getItemsList = () => {
     axios
-      .get("http://localhost:8000/api/items/")
+      .get("https://backend-thanks-in-advance.herokuapp.com/api/items/")
       .then((response) => this.setState({ wishList: response.data }))
       .catch((error) => console.log(error));
   };
@@ -117,7 +117,10 @@ class App extends Component {
     const item = this.state.activeItem;
 
     axios
-      .post("http://localhost:8000/api/item-create/", item)
+      .post(
+        "https://backend-thanks-in-advance.herokuapp.com/api/item-create/",
+        item
+      )
       .then((response) => {
         //concat adds item to end of list
         this.setState({ wishList: this.state.wishList.concat(item) });
@@ -144,7 +147,10 @@ class App extends Component {
     );
     if (foundIndex !== -1) {
       axios
-        .put(`http://localhost:8000/api/item-update/${item.id}/`, item)
+        .put(
+          `https://backend-thanks-in-advance.herokuapp.com/api/item-update/${item.id}/`,
+          item
+        )
         .then((response) => {
           const wishListCopy = [...this.state.wishList];
           wishListCopy[foundIndex] = item;
@@ -165,7 +171,9 @@ class App extends Component {
     );
     if (foundItem) {
       axios
-        .delete(`http://localhost:8000/api/item-delete/${item.id}/`)
+        .delete(
+          `https://backend-thanks-in-advance.herokuapp.com/api/item-delete/${item.id}/`
+        )
         .then((response) => {
           const filteredWishList = this.state.wishList.filter(
             (wishListItem) => wishListItem.id !== foundItem.id

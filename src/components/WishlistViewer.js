@@ -50,7 +50,9 @@ function WishlistViewer() {
     console.log(isFriendViewing);
     setActiveWishlist(currentWishlist);
     axios
-      .get(`http://localhost:8000/api/items-wishlist/${currentWishlist.id}/`)
+      .get(
+        `https://backend-thanks-in-advance.herokuapp.com/api/items-wishlist/${currentWishlist.id}/`
+      )
       .then((response) => {
         console.log("in getItemsList");
         const itemsList = response.data;
@@ -152,7 +154,10 @@ function WishlistViewer() {
     // setActiveWishlist(item.wishlist_id);
     item.wishlist = activeWishlist.id;
     axios
-      .post("http://localhost:8000/api/item-create/", item)
+      .post(
+        "https://backend-thanks-in-advance.herokuapp.com/api/item-create/",
+        item
+      )
       .then((response) => {
         //concat adds item to end of list
         // const newItemsList = itemsList.concat(item);
@@ -188,7 +193,10 @@ function WishlistViewer() {
     );
     if (foundIndex !== -1) {
       axios
-        .put(`http://localhost:8000/api/item-update/${item.id}/`, item)
+        .put(
+          `https://backend-thanks-in-advance.herokuapp.com/api/item-update/${item.id}/`,
+          item
+        )
         .then((response) => {
           const listCopy = [...itemsList];
           listCopy[foundIndex] = item;
@@ -209,7 +217,9 @@ function WishlistViewer() {
     const foundItem = itemsList.find((listItem) => item.id === listItem.id);
     if (foundItem) {
       axios
-        .delete(`http://localhost:8000/api/item-delete/${item.id}/`)
+        .delete(
+          `https://backend-thanks-in-advance.herokuapp.com/api/item-delete/${item.id}/`
+        )
         .then((response) => {
           const filteredList = itemsList.filter(
             (listItem) => listItem.id !== foundItem.id

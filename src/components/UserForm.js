@@ -37,7 +37,10 @@ const UserForm = () => {
   const updateProfile = () => {
     const user = userProfile;
     axios
-      .put(`http://localhost:8000/api/user-update/${user.id}/`, user)
+      .put(
+        `https://backend-thanks-in-advance.herokuapp.com/api/user-update/${user.id}/`,
+        user
+      )
       .then((response) => {
         const updatedUser = response.data;
         setUserProfile(updatedUser);

@@ -19,7 +19,9 @@ const FriendWishlist = (props) => {
 
   const getFriendWishlists = () => {
     axios
-      .get(`http://localhost:8000/api/friend-wishlists/${props.userId}/`)
+      .get(
+        `https://backend-thanks-in-advance.herokuapp.com/api/friend-wishlists/${props.userId}/`
+      )
       .then((response) => {
         // use map here?
         setFriendWishlists(response.data);

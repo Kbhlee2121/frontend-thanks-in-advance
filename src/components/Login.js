@@ -32,7 +32,10 @@ const Login = (props) => {
 
   const loginButtonHandler = (e) => {
     axios
-      .post("http://localhost:8000/api/login/", loginInfo)
+      .post(
+        "https://backend-thanks-in-advance.herokuapp.com/api/login/",
+        loginInfo
+      )
       .then((response) => {
         //backend sends back response (user) and sets the user state for App
         // const newUser = response.data;
