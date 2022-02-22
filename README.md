@@ -32,14 +32,14 @@ Backend:
 
 ## Instructions for Set-Up
 
-1.Clone this repository
-2.Yarn install required dependencies for frontend
-3.Run yarn start
-4.Go to localhost:3000/api/login
-5.Clone backend repository: https://github.com/Kbhlee2121/backend-thanks-in-advance
-6.Create and activate virtual environment
-7.Install required dependencies for backend
-8.Run the following commands:
+1. Clone this repository
+2. Yarn install required dependencies for frontend
+3. Run yarn start
+4. Go to localhost:3000/api/login
+5. Clone backend repository: https://github.com/Kbhlee2121/backend-thanks-in-advance
+6. Create and activate virtual environment
+7. Install required dependencies for backend
+8. Run the following commands:
 
 python manage.py makemigrations
 
@@ -52,4 +52,5 @@ python manage.py runserver
 Login Page:
 
 Frontend: https://suspicious-perlman-9d31e6.netlify.app/
+
 Backend: https://backend-thanks-in-advance.herokuapp.com/api/login/
