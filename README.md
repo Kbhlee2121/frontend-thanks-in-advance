@@ -1,71 +1,55 @@
-# Getting Started with Create React App
+# Thanks in Advance
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thanks in Advance was created as a capstone project for Ada Developers Academy C16. It is a one-stop-shop application for creating and managing wishlists for any and all occasions, such as for Christmas, Birthdays, Weddings, and more. Thanks in Advance helps make gift giving easier where the receiver is gauranteed to like the gift and can be convenient for those who have minimalist or selective family/friends. It can also be particularly helpful for those who always struggle to find the right gift and for those who have been giving gifts to each other for years and are just simply out of ideas. Rather than spending money needlessly on an item you're not sure the receiver will like, Thanks in Advance was created with the intention of allowing users to view each other wishlists and gift profile, make claims on each other items, and still have an element of surprise. (See future enhancements). 
 
-## Available Scripts
+## Description of Tech Stack
 
-In the project directory, you can run:
+* Backend: Django (Python)
+* Frontend: React, Bootstrap, Reactstrap
+* Database: PostgreSQL
+* Deployment: Heroku, Netlify
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Frontend: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Reactstrap
+** Cards
+** Froms
+** Input Fields
+** Modal
+** Button
+* Bootstrap
+** Row
+** Col
+* Axios
+* Hooks: useState, useEffect
 
-### `npm test`
+Backend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Django Rest Framework
+* Django CORS Headers
 
-### `npm run build`
+## Instructions for Set-Up
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.Clone this repository
+2.Yarn install required dependencies for frontend
+3.Run yarn start
+4.Go to localhost:3000/api/login
+5.Clone backend repository: https://github.com/Kbhlee2121/backend-thanks-in-advance
+6.Create and activate virtual environment
+7.Install required dependencies for backend
+8.Run the following commands:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+python manage.py makemigrations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+python manage.py migrate
 
-### `npm run eject`
+python manage.py runserver
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment Links
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Login Page:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# frontend-thanks-in-advance
+Frontend: https://suspicious-perlman-9d31e6.netlify.app/
+Backend: https://backend-thanks-in-advance.herokuapp.com/api/login/
