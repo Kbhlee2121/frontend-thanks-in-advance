@@ -13,17 +13,11 @@ Thanks in Advance was created as a capstone project for Ada Developers Academy C
 
 Frontend: 
 
-* Reactstrap
-** Cards
-** Froms
-** Input Fields
-** Modal
-** Button
-* Bootstrap
-** Row
-** Col
+* Reactstrap: Cards, Forms, Input Fields, Modals, Button
+* Bootstrap: Row, Col
 * Axios
 * Hooks: useState, useEffect
+* React Router: Link, BrowserRouter, Routes, Route, useNavigate, useLocation
 
 Backend:
 
@@ -54,3 +48,16 @@ Login Page:
 Frontend: https://suspicious-perlman-9d31e6.netlify.app/
 
 Backend: https://backend-thanks-in-advance.herokuapp.com/api/login/
+
+## Future Enhancements
+
+* Styling
+* User Authentication & Authorization
+* "Friending" Functionality
+* Push Notifications for upcoming events
+* "Group" Functionality for Secret Santa, etc.
+* Password Security using encrypted passwords
+
+## Demo
+
+https://youtu.be/5OJF-Hs0qSU
